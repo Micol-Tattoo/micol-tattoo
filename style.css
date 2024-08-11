@@ -329,7 +329,7 @@ footer a:hover {
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     gap: 15px;
     max-width: 1200px;
     margin: 0 auto;
@@ -413,11 +413,11 @@ footer a:hover {
     }
 
     nav ul li a {
-        font-size: 18px; /* Reduce el tamaño de la fuente en los enlaces de navegación */
+        font-size: 10px; /* Reduce el tamaño de la fuente en los enlaces de navegación */
     }
 
     #tatuajes .grid {
-        grid-template-columns: repeat(2, 1fr); /* Cambia a 2 columnas para pantallas más pequeñas */
+        grid-template-columns: repeat(4, 1fr); /* Cambia a 2 columnas para pantallas más pequeñas */
     }
 
     .quien-soy-content {
