@@ -69,7 +69,7 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: #fff;
-    font-size: 24px;
+    font-size: 16px;
     opacity: 0;
     animation: fadeIn 2s ease-out forwards;
 }
