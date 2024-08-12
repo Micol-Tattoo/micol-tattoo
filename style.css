@@ -57,6 +57,7 @@ nav {
 nav ul {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 20px;
 }
 
@@ -103,7 +104,7 @@ nav ul li a:nth-child(4) {
 
 #tatuajes .grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 15px;
     max-width: 900px;
     margin: 0 auto;
@@ -180,28 +181,85 @@ nav ul li a:nth-child(4) {
     color: #000;
 }
 
-#quien-soy {
-    padding: 20px 10px;
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-#quien-soy h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-.quien-soy-content {
+#sobre-mi {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 20px;
-    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px; /* Espacio alrededor para respiración */
+    text-align: left; /* Alineación de texto a la izquierda */
 }
 
-.quien-soy-content video,
-.quien-soy-content p {
-    width: 48%;
+.sobre-mi-container {
+    display: flex;
+    flex-direction: row; /* Distribuye el video y texto en línea */
+    align-items: center;
+    gap: 40px; /* Espacio entre el video y el texto */
+    max-width: 1200px; /* Ancho máximo para limitar el contenido */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    padding: 20px; /* Espacio interno */
+    background-color: #fff; /* Fondo blanco para un look limpio */
+}
+
+.sobre-mi-video {
+    flex: 1; /* Video ocupa el 50% del espacio */
+    max-width: 600px; /* Limita el ancho máximo del video */
+}
+
+.sobre-mi-video video {
+    width: 100%; /* El video ocupa todo el ancho disponible */
+    height: auto; /* Mantiene las proporciones */
+    border-radius: 15px; /* Bordes redondeados para armonía visual */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+.sobre-mi-texto {
+    flex: 1; /* Texto ocupa el otro 50% */
+    color: #333; /* Texto oscuro para buena legibilidad */
+    line-height: 1.8; /* Espaciado entre líneas */
+    font-family: 'Times New Roman', sans-serif; /* Fuente limpia y moderna */
+    font-size: 18px; /* Tamaño de texto cómodo para lectura */
+    padding: 20px; /* Espacio interno */
+}
+
+.sobre-mi-texto h2 {
+    font-size: 36px; /* Tamaño del título */
+    color: #000; /* Color del título */
+    margin-bottom: 20px; /* Espacio debajo del título */
+    font-family: 'Times New Roman', serif; /* Elegancia y contraste en la tipografía */
+}
+
+.sobre-mi-texto p {
+    margin: 0; /* Elimina márgenes innecesarios */
+    text-align: justify; /* Justificación para alineación uniforme */
+}
+
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+    #sobre-mi {
+        padding: 40px 10px; /* Reduce el padding en pantallas pequeñas */
+    }
+
+    .sobre-mi-container {
+        flex-direction: column; /* Coloca video y texto en columna */
+        text-align: center; /* Centra el texto en móviles */
+    }
+
+    .sobre-mi-video,
+    .sobre-mi-texto {
+        max-width: 100%; /* Elimina el límite de ancho */
+    }
+
+    .sobre-mi-texto {
+        padding: 20px 10px; /* Ajuste del padding en móviles */
+    }
+
+    .sobre-mi-texto h2 {
+        font-size: 30px; /* Ajuste del tamaño del título en móviles */
+    }
+
+    .sobre-mi-video {
+        margin-bottom: 20px; /* Espacio debajo del video */
+    }
 }
 
 #citas {
@@ -413,11 +471,11 @@ footer a:hover {
     }
 
     nav ul li a {
-        font-size: 10px; /* Reduce el tamaño de la fuente en los enlaces de navegación */
+        font-size: 19px; /* Reduce el tamaño de la fuente en los enlaces de navegación */
     }
 
     #tatuajes .grid {
-        grid-template-columns: repeat(4, 1fr); /* Cambia a 2 columnas para pantallas más pequeñas */
+        grid-template-columns: repeat(3, 1fr); /* Cambia a 2 columnas para pantallas más pequeñas */
     }
 
     .quien-soy-content {
@@ -438,3 +496,4 @@ footer a:hover {
         font-size: 16px; /* Ajusta el tamaño de fuente */
     }
 }
+
