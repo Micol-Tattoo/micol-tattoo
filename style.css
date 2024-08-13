@@ -13,8 +13,7 @@ header {
 header h1 {
     color: #fff;
     margin: 0;
-    font-size: 1.2rem;
-    padding: 10px;
+    font-size: 2rem;
     animation: fadeIn 2s ease-out;
 }
 
@@ -70,11 +69,9 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: #fff;
-    font-size: 18px;
+    font-size: 24px;
     opacity: 0;
     animation: fadeIn 2s ease-out forwards;
-    white-space: nowrap;
-    overflow: hidden;
 }
 
 nav ul li a:nth-child(1) {
@@ -265,14 +262,7 @@ nav ul li a:nth-child(4) {
 
     .sobre-mi-video {
         margin-bottom: 20px; /* Espacio debajo del video */
-    }
-
-video::-webkit-media-controls {
-    display: none !important;
-}
-
-video::-webkit-media-controls-overlay-play-button {
-    display: none !important;
+    
 }
 
 @media (max-width: 768px) {
@@ -394,8 +384,6 @@ footer .green-text {
 
 footer p {
     margin: 5px 0;
-    white-space: nowrap;
-    overflow: hidden;
 }
 
 footer a {
