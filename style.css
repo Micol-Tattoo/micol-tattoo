@@ -64,12 +64,16 @@ nav ul {
 nav ul li {
     display: inline;
     margin: 0 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-nav ul li a {
+@media (max-widtch:768px) {
+    nav ul li a {
     text-decoration: none;
     color: #fff;
-    font-size: 16px;
+    font-size: 18px;
     opacity: 0;
     animation: fadeIn 2s ease-out forwards;
 }
@@ -89,6 +93,7 @@ nav ul li a:nth-child(3) {
 nav ul li a:nth-child(4) {
     animation-delay: 2.5s;
 }
+
 
 #tatuajes, #quien-soy {
     text-align: center;
@@ -260,6 +265,14 @@ nav ul li a:nth-child(4) {
     .sobre-mi-video {
         margin-bottom: 20px; /* Espacio debajo del video */
     }
+
+    video::-webkit-media-controls {
+        display: none !important;
+    }
+    
+    video::-webkit-media-controls-overlay-play-button {
+        display: none !important;
+    }
 }
 
 #citas {
@@ -357,7 +370,12 @@ footer .green-text {
 }
 
 footer p {
+    font-size: 14px;
+    line-height: 1.5;
     margin: 5px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 footer a {
