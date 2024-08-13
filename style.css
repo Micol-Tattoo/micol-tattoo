@@ -69,7 +69,7 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: #fff;
-    font-size: 24px;
+    font-size: 16px;
     opacity: 0;
     animation: fadeIn 2s ease-out forwards;
 }
@@ -186,7 +186,6 @@ nav ul li a:nth-child(4) {
     justify-content: center;
     align-items: center;
     padding: 60px 20px; /* Espacio alrededor para respiración */
-    background-color: #f4f4f4; /* Color de fondo suave para contraste */
     text-align: left; /* Alineación de texto a la izquierda */
 }
 
@@ -199,8 +198,6 @@ nav ul li a:nth-child(4) {
     width: 100%; /* Ocupa todo el ancho disponible */
     padding: 20px; /* Espacio interno */
     background-color: #fff; /* Fondo blanco para un look limpio */
-    border-radius: 15px; /* Bordes redondeados para suavidad */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave para profundidad */
 }
 
 .sobre-mi-video {
@@ -219,7 +216,7 @@ nav ul li a:nth-child(4) {
     flex: 1; /* Texto ocupa el otro 50% */
     color: #333; /* Texto oscuro para buena legibilidad */
     line-height: 1.8; /* Espaciado entre líneas */
-    font-family: 'Arial', sans-serif; /* Fuente limpia y moderna */
+    font-family: 'Times New Roman', sans-serif; /* Fuente limpia y moderna */
     font-size: 18px; /* Tamaño de texto cómodo para lectura */
     padding: 20px; /* Espacio interno */
 }
@@ -228,7 +225,7 @@ nav ul li a:nth-child(4) {
     font-size: 36px; /* Tamaño del título */
     color: #000; /* Color del título */
     margin-bottom: 20px; /* Espacio debajo del título */
-    font-family: 'Georgia', serif; /* Elegancia y contraste en la tipografía */
+    font-family: 'Times New Roman', serif; /* Elegancia y contraste en la tipografía */
 }
 
 .sobre-mi-texto p {
@@ -262,29 +259,6 @@ nav ul li a:nth-child(4) {
 
     .sobre-mi-video {
         margin-bottom: 20px; /* Espacio debajo del video */
-    
-}
-
-@media (max-width: 768px) {
-    .sobre-mi-content {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .sobre-mi-content video, 
-    .sobre-mi-content p {
-        width: 100%;  /* Elementos ocupan todo el ancho */
-        max-height: none;  /* Sin límite de altura en móviles */
-    }
-
-    .sobre-mi-content video {
-        margin-bottom: 20px;
-        border-radius: 10px;
-    }
-
-    .sobre-mi-content p {
-        padding: 0 20px;  /* Margen interno para el texto en móviles */
     }
 }
 
@@ -373,7 +347,7 @@ nav ul li a:nth-child(4) {
 footer {
     background-color: #000;
     color: #fff;
-    padding: 20px;
+    padding: 17px;
     text-align: center;
     font-size: 14px;
 }
@@ -413,6 +387,8 @@ footer a:hover {
 
 .gallery-grid {
     display: grid;
+    width: 100%;
+    display: auto;
     grid-template-columns: repeat(6, 1fr);
     gap: 15px;
     max-width: 1200px;
@@ -421,6 +397,7 @@ footer a:hover {
 
 .gallery-grid img {
     width: 100%;
+    display: auto;
     border-radius: 15px;
     cursor: pointer;
     transition: transform 0.3s ease, opacity 0.3s ease;
@@ -497,7 +474,7 @@ footer a:hover {
     }
 
     nav ul li a {
-        font-size: 19px; /* Reduce el tamaño de la fuente en los enlaces de navegación */
+        font-size: 16px; /* Reduce el tamaño de la fuente en los enlaces de navegación */
     }
 
     #tatuajes .grid {
