@@ -72,9 +72,8 @@ nav ul li a {
     font-size: 24px;
     opacity: 0;
     animation: fadeIn 2s ease-out forwards;
-    white-space: nowrap; /* Evita saltos de línea */
-    overflow: hidden; /* Oculta cualquier desbordamiento */
-    
+}
+
 nav ul li a:nth-child(1) {
     animation-delay: 1s;
 }
@@ -155,7 +154,7 @@ nav ul li a:nth-child(4) {
 }
 
 #dibujos img {
-    max-width: 100%; /* Responsivo */
+    max-width: 100%; /* Cambiado para ser responsivo */
     height: auto;
     position: relative;
     z-index: 1;
@@ -183,56 +182,71 @@ nav ul li a:nth-child(4) {
 }
 
 #sobre-mi {
-    padding: 40px 20px;  /* Más espacio alrededor de la sección */
+    padding: 40 px 20px;  /* Aumentamos el padding para más espacio */
     max-width: 1000px;  /* Ampliamos el ancho máximo */
     margin: 0 auto;  /* Centra la sección */
-    text-align: center;  /* Centra el contenido dentro de la sección */
+    border-radius: 10px;  /* Bordes redondeados */
 }
 
-.sobre-mi-container {
+#sobre-mi h2 {
+    font-size: 40px;  /* Texto más grande para el título */
+    margin-bottom: 30px;  /* Más espacio debajo del título */
+    text-align: center;
+    color: #333;  /* Color oscuro para contraste */
+    font-family: 'Georgia', serif;  /* Fuente serif elegante */
+}
+
+.sobre-mi-content {
     display: flex;
-    flex-direction: row; /* Distribuye el video y texto en línea */
-    align-items: center;
-    gap: 40px; /* Espacio entre el video y el texto */
-    max-width: 1200px; /* Ancho máximo para limitar el contenido */
-    width: 100%; /* Ocupa todo el ancho disponible */
-    padding: 20px; /* Espacio interno */
-    background-color: #fff; /* Fondo blanco para un look limpio */
-    border-radius: 15px; /* Bordes redondeados */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave para profundidad */
+    justify-content: space-between;
+    align-items: flex-start;  /* Alineación al inicio para mejor balance */
+    gap: 40px;  /* Más espacio entre video y texto */
+    margin-top: 20px;
 }
 
-.sobre-mi-video {
-    flex: 1; /* Video ocupa el 50% del espacio */
-    max-width: 600px; /* Limita el ancho máximo del video */
+.sobre-mi-content video {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    aspect-ratio: 4 / 3;
+    border-radius: 10px;  /* Bordes redondeados para el video */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Sombra para profundidad */
 }
 
-.sobre-mi-video video {
-    width: 100%; /* El video ocupa todo el ancho disponible */
-    height: auto; /* Mantiene las proporciones */
-    border-radius: 15px; /* Bordes redondeados para armonía visual */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+.sobre-mi-content p {
+    width: 70%;
+    max-height: 400px;
+    overflow-y: auto;
+    text-align: justify;
+    line-height: 1.8;  /* Mejora la legibilidad */
+    color: #555;  /* Color de texto más suave */
+    font-size: 18px;  /* Tamaño de texto más legible */
+    font-family: 'Arial', sans-serif;  /* Fuente limpia y moderna */
+    padding-right: 20px;  /* Espacio entre texto y borde del contenedor */
+    margin: 0;
 }
 
-.sobre-mi-texto {
-    flex: 1; /* Texto ocupa el otro 50% */
-    color: #333; /* Texto oscuro para buena legibilidad */
-    line-height: 1.8; /* Espaciado entre líneas */
-    font-family: 'Arial', sans-serif; /* Fuente limpia y moderna */
-    font-size: 18px; /* Tamaño de texto cómodo para lectura */
-    padding: 20px; /* Espacio interno */
-}
+@media (max-width: 768px) {
+    .sobre-mi-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 
-.sobre-mi-texto h2 {
-    font-size: 36px; /* Tamaño del título */
-    color: #000; /* Color del título */
-    margin-bottom: 20px; /* Espacio debajo del título */
-    font-family: 'Georgia', serif; /* Elegancia y contraste en la tipografía */
-}
+    .sobre-mi-content video, 
+    .sobre-mi-content p {
+        width: 100%;  /* Elementos ocupan todo el ancho */
+        max-height: none;  /* Sin límite de altura en móviles */
+    }
 
-.sobre-mi-texto p {
-    margin: 0; /* Elimina márgenes innecesarios */
-    text-align: justify; /* Justificación para alineación uniforme */
+    .sobre-mi-content video {
+        margin-bottom: 20px;
+        border-radius: 10px;
+    }
+
+    .sobre-mi-content p {
+        padding: 0 20px;  /* Margen interno para el texto en móviles */
+    }
 }
 
 #citas {
@@ -267,7 +281,7 @@ nav ul li a:nth-child(4) {
     padding: 20px 10px;
     margin-top: -30px;
     position: relative;
-    z-index: 2;
+    z-index:2;
 }
 
 #contacto h2 {
@@ -326,13 +340,11 @@ footer {
 }
 
 footer .green-text {
-    color: #32CD32; /* Verde claro para contraste con fondo negro */
+    color: #32CD32; /* Este es un verde claro que contrasta bien con el fondo negro */
 }
 
 footer p {
     margin: 5px 0;
-    font-size: 14px; /* Ajuste para móviles */
-    line-height: 1.5; /* Buen espaciado en móviles */
 }
 
 footer a {
@@ -384,55 +396,18 @@ footer a:hover {
     .gallery-grid {
         grid-template-columns: repeat(3, 1fr);
     }
-
-    header h1 {
-        font-size: 1.2rem; /* Ajuste del tamaño del texto del header */
-        padding: 10px; /* Ajuste del padding para móviles */
-    }
-
-    nav ul li a {
-        font-size: 18px; /* Reduce el tamaño de la fuente en los enlaces de navegación */
-    }
-
-    #tatuajes .grid {
-        grid-template-columns: repeat(3, 1fr); /* Cambia a 3 columnas para pantallas más pequeñas */
-    }
-
-    .sobre-mi-container {
-        flex-direction: column; /* Cambia la dirección del flex a columna */
-        text-align: center; /* Centra el texto en móviles */
-    }
-
-    .sobre-mi-video, 
-    .sobre-mi-texto {
-        width: 100%; /* Elementos ocupan todo el ancho */
-        max-width: none; /* Sin límite de ancho en móviles */
-    }
-
-    .sobre-mi-video {
-        margin-bottom: 20px; /* Espacio debajo del video */
-        border-radius: 10px;
-    }
-
-    .sobre-mi-texto {
-        padding: 0 20px; /* Margen interno para el texto en móviles */
-    }
-
-    #contacto h2 {
-        font-size: 24px; /* Ajusta el tamaño del texto de contacto */
-    }
-
-    #citas p, #citas button {
-        font-size: 16px; /* Ajusta el tamaño de fuente */
-    }
-
-    footer p {
-        font-size: 12px; /* Ajuste de tamaño del texto para footer en móviles */
-        line-height: 1.4; /* Espaciado de línea más ajustado en móviles */
-    }
 }
 
 @keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInImage {
     0% {
         opacity: 0;
     }
@@ -465,7 +440,6 @@ footer a:hover {
 .modal img {
     max-width: 90%;
     max-height: 90%;
-    border-radius: 10px; /* Opcional: bordes redondeados para las imágenes ampliadas */
 }
 
 .close {
@@ -480,35 +454,25 @@ footer a:hover {
 /* Media queries para dispositivos móviles */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 1.2rem; /* Ajusta el tamaño del texto del header */
+        font-size: 1.5rem; /* Ajusta el tamaño del texto del header */
     }
 
     nav ul li a {
-        font-size: 18px; /* Reduce el tamaño de la fuente en los enlaces de navegación */
+        font-size: 19px; /* Reduce el tamaño de la fuente en los enlaces de navegación */
     }
 
     #tatuajes .grid {
-        grid-template-columns: repeat(3, 1fr); /* Cambia a 3 columnas para pantallas más pequeñas */
+        grid-template-columns: repeat(3, 1fr); /* Cambia a 2 columnas para pantallas más pequeñas */
     }
 
-    .sobre-mi-container {
+    .quien-soy-content {
         flex-direction: column; /* Cambia la dirección del flex a columna */
         text-align: center; /* Centra el texto */
     }
 
-    .sobre-mi-video, 
-    .sobre-mi-texto {
+    .quien-soy-content video,
+    .quien-soy-content p {
         width: 100%; /* Ocupan todo el ancho del contenedor */
-        max-width: none; /* Sin límite de ancho en móviles */
-    }
-
-    .sobre-mi-video {
-        margin-bottom: 20px;
-        border-radius: 10px;
-    }
-
-    .sobre-mi-texto {
-        padding: 0 20px; /* Margen interno para el texto en móviles */
     }
 
     #contacto h2 {
@@ -518,18 +482,4 @@ footer a:hover {
     #citas p, #citas button {
         font-size: 16px; /* Ajusta el tamaño de fuente */
     }
-
-    footer p {
-        font-size: 12px; /* Ajuste de tamaño del texto para footer en móviles */
-        line-height: 1.4; /* Espaciado de línea más ajustado en móviles */
-    }
-}
-
-/* Eliminar controles del video en dispositivos móviles */
-video::-webkit-media-controls {
-    display: none !important;
-}
-
-video::-webkit-media-controls-overlay-play-button {
-    display: none !important;
 }
