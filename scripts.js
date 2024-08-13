@@ -42,12 +42,4 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    document.addEventListener("DOMContentLoaded", function() {
-        const images = document.querySelectorAll(".gallery-grid img");
-
-        images.forEach(img => {
-            img.onerror = function() {
-                this.src = "images/placeholder.jpg"; // Imagen de respaldo
-                this.alt = "Imagen no disponible";
-            }
 });
