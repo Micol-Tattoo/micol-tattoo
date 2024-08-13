@@ -13,7 +13,8 @@ header {
 header h1 {
     color: #fff;
     margin: 0;
-    font-size: 2rem;
+    font-size: 1.2rem;
+    padding: 10px;
     animation: fadeIn 2s ease-out;
 }
 
@@ -69,9 +70,11 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: #fff;
-    font-size: 24px;
+    font-size: 18px;
     opacity: 0;
     animation: fadeIn 2s ease-out forwards;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 nav ul li a:nth-child(1) {
@@ -182,48 +185,94 @@ nav ul li a:nth-child(4) {
 }
 
 #sobre-mi {
-    padding: 40 px 20px;  /* Aumentamos el padding para más espacio */
-    max-width: 1000px;  /* Ampliamos el ancho máximo */
-    margin: 0 auto;  /* Centra la sección */
-    border-radius: 10px;  /* Bordes redondeados */
-}
-
-#sobre-mi h2 {
-    font-size: 40px;  /* Texto más grande para el título */
-    margin-bottom: 30px;  /* Más espacio debajo del título */
-    text-align: center;
-    color: #333;  /* Color oscuro para contraste */
-    font-family: 'Georgia', serif;  /* Fuente serif elegante */
-}
-
-.sobre-mi-content {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;  /* Alineación al inicio para mejor balance */
-    gap: 40px;  /* Más espacio entre video y texto */
-    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px; /* Espacio alrededor para respiración */
+    background-color: #f4f4f4; /* Color de fondo suave para contraste */
+    text-align: left; /* Alineación de texto a la izquierda */
 }
 
-.sobre-mi-content video {
-    width: 100%;
-    height: auto;
-    max-height: 400px;
-    aspect-ratio: 4 / 3;
-    border-radius: 10px;  /* Bordes redondeados para el video */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Sombra para profundidad */
+.sobre-mi-container {
+    display: flex;
+    flex-direction: row; /* Distribuye el video y texto en línea */
+    align-items: center;
+    gap: 40px; /* Espacio entre el video y el texto */
+    max-width: 1200px; /* Ancho máximo para limitar el contenido */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    padding: 20px; /* Espacio interno */
+    background-color: #fff; /* Fondo blanco para un look limpio */
+    border-radius: 15px; /* Bordes redondeados para suavidad */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave para profundidad */
 }
 
-.sobre-mi-content p {
-    width: 70%;
-    max-height: 400px;
-    overflow-y: auto;
-    text-align: justify;
-    line-height: 1.8;  /* Mejora la legibilidad */
-    color: #555;  /* Color de texto más suave */
-    font-size: 18px;  /* Tamaño de texto más legible */
-    font-family: 'Arial', sans-serif;  /* Fuente limpia y moderna */
-    padding-right: 20px;  /* Espacio entre texto y borde del contenedor */
-    margin: 0;
+.sobre-mi-video {
+    flex: 1; /* Video ocupa el 50% del espacio */
+    max-width: 600px; /* Limita el ancho máximo del video */
+}
+
+.sobre-mi-video video {
+    width: 100%; /* El video ocupa todo el ancho disponible */
+    height: auto; /* Mantiene las proporciones */
+    border-radius: 15px; /* Bordes redondeados para armonía visual */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+.sobre-mi-texto {
+    flex: 1; /* Texto ocupa el otro 50% */
+    color: #333; /* Texto oscuro para buena legibilidad */
+    line-height: 1.8; /* Espaciado entre líneas */
+    font-family: 'Arial', sans-serif; /* Fuente limpia y moderna */
+    font-size: 18px; /* Tamaño de texto cómodo para lectura */
+    padding: 20px; /* Espacio interno */
+}
+
+.sobre-mi-texto h2 {
+    font-size: 36px; /* Tamaño del título */
+    color: #000; /* Color del título */
+    margin-bottom: 20px; /* Espacio debajo del título */
+    font-family: 'Georgia', serif; /* Elegancia y contraste en la tipografía */
+}
+
+.sobre-mi-texto p {
+    margin: 0; /* Elimina márgenes innecesarios */
+    text-align: justify; /* Justificación para alineación uniforme */
+}
+
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+    #sobre-mi {
+        padding: 40px 10px; /* Reduce el padding en pantallas pequeñas */
+    }
+
+    .sobre-mi-container {
+        flex-direction: column; /* Coloca video y texto en columna */
+        text-align: center; /* Centra el texto en móviles */
+    }
+
+    .sobre-mi-video,
+    .sobre-mi-texto {
+        max-width: 100%; /* Elimina el límite de ancho */
+    }
+
+    .sobre-mi-texto {
+        padding: 20px 10px; /* Ajuste del padding en móviles */
+    }
+
+    .sobre-mi-texto h2 {
+        font-size: 30px; /* Ajuste del tamaño del título en móviles */
+    }
+
+    .sobre-mi-video {
+        margin-bottom: 20px; /* Espacio debajo del video */
+    }
+
+video::-webkit-media-controls {
+    display: none !important;
+}
+
+video::-webkit-media-controls-overlay-play-button {
+    display: none !important;
 }
 
 @media (max-width: 768px) {
@@ -345,6 +394,8 @@ footer .green-text {
 
 footer p {
     margin: 5px 0;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 footer a {
