@@ -1,3 +1,6 @@
+/* Importar una fuente moderna y estilizada */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
 body {
     margin: 0;
     font-family: 'Times New Roman', Times, serif;
@@ -58,21 +61,45 @@ nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px; /* Disminuye el espacio entre los enlaces */
+    gap: 5px; /* Espacio mínimo entre elementos */
+    font-family: 'Montserrat', sans-serif; /* Fuente moderna */
+    text-transform: uppercase; /* Convertir texto a mayúsculas */
+    font-weight: 300; /* Peso de fuente más fino */
+    letter-spacing: 1px; /* Espaciado entre letras */
 }
 
 nav ul li {
     display: inline;
-    margin: 0 5px; /* Ajusta el margen para centrar mejor los elementos */
+    margin: 0;
 }
 
 nav ul li a {
     text-decoration: none;
     color: #fff;
-    font-size: 16px;
-    opacity: 0;
-    animation: fadeIn 2s ease-out forwards;
+    font-size: 14px; /* Tamaño de fuente ajustado */
+    padding: 10px 15px; /* Padding alrededor del texto */
+    position: relative;
 }
+
+nav ul li:not(:last-child)::after {
+    content: '|';
+    color: #fff;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@media (max-width: 768px) {
+    nav ul li a {
+        font-size: 10px;
+        padding: 5px 10px
+    }
+
+    nav ul li:not(:last-child)::after {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+
 
 nav ul li a:nth-child(1) {
     animation-delay: 1s;
@@ -218,7 +245,7 @@ nav ul li a:nth-child(4) {
     color: #333; /* Texto oscuro para buena legibilidad */
     line-height: 1.8; /* Espaciado entre líneas */
     font-family: 'Times New Roman', sans-serif; /* Fuente limpia y moderna */
-    font-size: 18px; /* Tamaño de texto cómodo para lectura */
+    font-size: 16px; /* Tamaño de texto cómodo para lectura */
     padding: 20px; /* Espacio interno */
 }
 
@@ -231,7 +258,7 @@ nav ul li a:nth-child(4) {
 
 .sobre-mi-texto p {
     margin: 0; /* Elimina márgenes innecesarios */
-    text-align: justify; /* Justificación para alineación uniforme */
+
 }
 
 #citas {
@@ -353,8 +380,10 @@ footer p a {
     }
 
     nav ul {
-        flex-wrap: wrap; /* Permite que los enlaces se distribuyan en varias líneas */
-        gap: 5px; /* Disminuye el espacio entre los enlaces */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4px; /* Disminuye el espacio entre los enlaces */
     }
 
     nav ul li {
@@ -362,8 +391,15 @@ footer p a {
     }
 
     nav ul li a {
-        font-size: 14px; /* Reduce el tamaño de la fuente en los enlaces de navegación */
+        font-size: 20px;
+        padding: 10px 0;
     }
+
+    nav {
+        top: 75%
+        width: 90%
+    }
+}
 
     #tatuajes .grid {
         grid-template-columns: repeat(3, 1fr); /* Cambia a 3 columnas para pantallas más pequeñas */
@@ -401,6 +437,52 @@ footer p a {
         flex-wrap: wrap;
     }
 }
+
+/* Estilos para la galería */
+#galeria h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+#galeria .subtitle {
+    font-size: 20px;
+    font-style: italic;
+    margin-bottom: 30px;
+    color: #333;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gallery-grid {
+    display: grid;
+    width: 100%;
+    display: auto;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-grid img {
+    width: 100%;
+    display: auto;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* Media queries para ajustar la cuadricula en pantallas más pequeñas */
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 
 @keyframes fadeIn {
     0% {

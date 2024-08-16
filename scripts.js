@@ -42,16 +42,11 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // Asegurar que el video en la sección "Sobre Mi" no se expanda automáticamente a pantalla completa en dispositivos móviles
+    // Asegurar que el video en la sección "Sobre Mi" se reproduce automáticamente sin controles
     const sobreMiVideo = document.querySelector('.sobre-mi-video video');
-
-    sobreMiVideo.addEventListener('webkitbeginfullscreen', (e) => {
-        e.preventDefault();
-    });
-
-    sobreMiVideo.addEventListener('fullscreenchange', (e) => {
-        if (document.fullscreenElement === sobreMiVideo || document.webkitFullscreenElement === sobreMiVideo) {
-            document.exitFullscreen();
-        }
-    });
+    sobreMiVideo.removeAttribute('controls');
+    sobreMiVideo.setAttribute('autoplay', '');
+    sobreMiVideo.setAttribute('loop', '');
+    sobreMiVideo.setAttribute('muted', '');
+    sobreMiVideo.setAttribute('playsinline', ''); // Para evitar que el video se abra a pantalla completa en móviles
 });
