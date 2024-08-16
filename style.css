@@ -96,7 +96,7 @@ nav ul li a {
 nav ul li:not(:last-child)::after {
     content: '|';
     color: #fff;
-    margin: 0 10px;
+    margin: 0;
     position: relative;
 
 }
