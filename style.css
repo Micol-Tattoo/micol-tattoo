@@ -58,12 +58,12 @@ nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 10px; /* Disminuye el espacio entre los enlaces */
 }
 
 nav ul li {
     display: inline;
-    margin: 0 10px;
+    margin: 0 5px; /* Ajusta el margen para centrar mejor los elementos */
 }
 
 nav ul li a {
@@ -210,6 +210,7 @@ nav ul li a:nth-child(4) {
     height: auto; /* Mantiene las proporciones */
     border-radius: 15px; /* Bordes redondeados para armonía visual */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    object-fit: cover; /* Mantiene el video ajustado al contenedor */
 }
 
 .sobre-mi-texto {
@@ -231,35 +232,6 @@ nav ul li a:nth-child(4) {
 .sobre-mi-texto p {
     margin: 0; /* Elimina márgenes innecesarios */
     text-align: justify; /* Justificación para alineación uniforme */
-}
-
-/* Media Queries para pantallas más pequeñas */
-@media (max-width: 768px) {
-    #sobre-mi {
-        padding: 40px 10px; /* Reduce el padding en pantallas pequeñas */
-    }
-
-    .sobre-mi-container {
-        flex-direction: column; /* Coloca video y texto en columna */
-        text-align: center; /* Centra el texto en móviles */
-    }
-
-    .sobre-mi-video,
-    .sobre-mi-texto {
-        max-width: 100%; /* Elimina el límite de ancho */
-    }
-
-    .sobre-mi-texto {
-        padding: 20px 10px; /* Ajuste del padding en móviles */
-    }
-
-    .sobre-mi-texto h2 {
-        font-size: 30px; /* Ajuste del tamaño del título en móviles */
-    }
-
-    .sobre-mi-video {
-        margin-bottom: 20px; /* Espacio debajo del video */
-    }
 }
 
 #citas {
@@ -294,7 +266,7 @@ nav ul li a:nth-child(4) {
     padding: 20px 10px;
     margin-top: -30px;
     position: relative;
-    z-index:2;
+    z-index: 2;
 }
 
 #contacto h2 {
@@ -353,7 +325,7 @@ footer {
 }
 
 footer .green-text {
-    color: #32CD32; /* Este es un verde claro que contrasta bien con el fondo negro */
+    color: #32CD32; /* Verde claro que contrasta bien con el fondo negro */
 }
 
 footer p {
@@ -369,48 +341,64 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Estilos para la galería */
-#galeria h2 {
-    font-size: 36px;
-    margin-bottom: 10px;
+footer p a {
+    display: inline-block;
+    margin: 0 5px;
 }
 
-#galeria .subtitle {
-    font-size: 20px;
-    font-style: italic;
-    margin-bottom: 30px;
-    color: #333;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.gallery-grid {
-    display: grid;
-    width: 100%;
-    display: auto;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 15px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.gallery-grid img {
-    width: 100%;
-    display: auto;
-    border-radius: 15px;
-    cursor: pointer;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.gallery-grid img:hover {
-    transform: scale(1.05);
-}
-
-/* Media queries para ajustar la cuadricula en pantallas más pequeñas */
+/* Media Queries para pantallas más pequeñas */
 @media (max-width: 768px) {
-    .gallery-grid {
-        grid-template-columns: repeat(3, 1fr);
+    header h1 {
+        font-size: 1.5rem; /* Ajusta el tamaño del texto del header */
+    }
+
+    nav ul {
+        flex-wrap: wrap; /* Permite que los enlaces se distribuyan en varias líneas */
+        gap: 5px; /* Disminuye el espacio entre los enlaces */
+    }
+
+    nav ul li {
+        margin: 0 2px; /* Ajusta el margen para centrar mejor los elementos */
+    }
+
+    nav ul li a {
+        font-size: 14px; /* Reduce el tamaño de la fuente en los enlaces de navegación */
+    }
+
+    #tatuajes .grid {
+        grid-template-columns: repeat(3, 1fr); /* Cambia a 3 columnas para pantallas más pequeñas */
+    }
+
+    .sobre-mi-container {
+        flex-direction: column; /* Coloca video y texto en columna */
+        text-align: center; /* Centra el texto en móviles */
+    }
+
+    .sobre-mi-video,
+    .sobre-mi-texto {
+        max-width: 100%; /* Elimina el límite de ancho */
+    }
+
+    .sobre-mi-texto {
+        padding: 20px 10px; /* Ajuste del padding en móviles */
+    }
+
+    .sobre-mi-texto h2 {
+        font-size: 30px; /* Ajuste del tamaño del título en móviles */
+    }
+
+    .sobre-mi-video {
+        margin-bottom: 20px; /* Espacio debajo del video */
+    }
+
+    footer p a {
+        font-size: 12px;
+    }
+
+    footer p {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
     }
 }
 
@@ -465,37 +453,4 @@ footer a:hover {
     font-size: 2rem;
     color: #fff;
     cursor: pointer;
-}
-
-/* Media queries para dispositivos móviles */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 1.5rem; /* Ajusta el tamaño del texto del header */
-    }
-
-    nav ul li a {
-        font-size: 16px; /* Reduce el tamaño de la fuente en los enlaces de navegación */
-    }
-
-    #tatuajes .grid {
-        grid-template-columns: repeat(3, 1fr); /* Cambia a 2 columnas para pantallas más pequeñas */
-    }
-
-    .quien-soy-content {
-        flex-direction: column; /* Cambia la dirección del flex a columna */
-        text-align: center; /* Centra el texto */
-    }
-
-    .quien-soy-content video,
-    .quien-soy-content p {
-        width: 100%; /* Ocupan todo el ancho del contenedor */
-    }
-
-    #contacto h2 {
-        font-size: 24px; /* Ajusta el tamaño del texto de contacto */
-    }
-
-    #citas p, #citas button {
-        font-size: 16px; /* Ajusta el tamaño de fuente */
-    }
 }
