@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     closeModal.addEventListener('click', () => {
         modal.classList.add('hidden');
-                modal.classList.remove('show');
+        modal.classList.remove('show');
     });
 
     modal.addEventListener('click', (e) => {
@@ -44,6 +44,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Asegurar que el video en la sección "Sobre Mi" no se expanda automáticamente a pantalla completa en dispositivos móviles
     const sobreMiVideo = document.querySelector('.sobre-mi-video video');
+
+    sobreMiVideo.setAttribute('loop', 'true');
+    sobreMiVideo.setAttribute('muted', 'true');
+    sobreMiVideo.setAttribute('playsinline', 'true');
+    sobreMiVideo.setAttribute('autoplay', 'true');
 
     sobreMiVideo.addEventListener('webkitbeginfullscreen', (e) => {
         e.preventDefault();

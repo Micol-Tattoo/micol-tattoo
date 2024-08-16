@@ -1,9 +1,11 @@
+/* Estilos globales y básicos */
 body {
     margin: 0;
     font-family: 'Times New Roman', Times, serif;
     color: #000;
 }
 
+/* Estilos de la cabecera */
 header {
     background-color: #000;
     text-align: center;
@@ -17,6 +19,7 @@ header h1 {
     animation: fadeIn 2s ease-out;
 }
 
+/* Estilos del cuerpo principal */
 main {
     padding: 20px;
 }
@@ -46,6 +49,7 @@ section {
     animation: fadeIn 2s ease-out 1s forwards;
 }
 
+/* Estilos de la navegación */
 nav {
     position: absolute;
     top: 80%;
@@ -58,11 +62,10 @@ nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5px; /* Espacio mínimo entre elementos */
-    font-family: 'Times New Roman', sans-serif; /* Fuente moderna */
-    text-transform: uppercase; /* Convertir texto a mayúsculas */
-    font-weight: 300; /* Peso de fuente más fino */
-
+    gap: 5px;
+    font-family: 'Times New Roman', sans-serif;
+    text-transform: uppercase;
+    font-weight: 300;
 }
 
 nav ul li {
@@ -73,8 +76,8 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: #fff;
-    font-size: 5x; /* Tamaño de fuente ajustado */
-    padding: 5px 10px; /* Padding alrededor del texto */
+    font-size: 20px; /* Ajuste del tamaño de fuente */
+    padding: 5px 10px;
     position: relative;
 }
 
@@ -85,39 +88,26 @@ nav ul li:not(:last-child)::after {
     padding-right: 15px;
 }
 
+/* Estilos en dispositivos móviles */
 @media (max-width: 768px) {
     nav {
-        top:70%
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
-    
+
     nav ul li a {
-        font-size: 8px;
-        padding: 8px 12px
+        font-size: 14px;
+        padding: 8px 12px;
     }
 
     nav ul li:not(:last-child)::after {
         padding-left: 10px;
         padding-right: 10px;
     }
-
-
-
-nav ul li a:nth-child(1) {
-    animation-delay: 1s;
 }
 
-nav ul li a:nth-child(2) {
-    animation-delay: 1.5s;
-}
-
-nav ul li a:nth-child(3) {
-    animation-delay: 2s;
-}
-
-nav ul li a:nth-child(4) {
-    animation-delay: 2.5s;
-}
-
+/* Estilos de las secciones */
 #tatuajes, #quien-soy {
     text-align: center;
 }
@@ -182,7 +172,7 @@ nav ul li a:nth-child(4) {
 }
 
 #dibujos img {
-    max-width: 100%; /* Cambiado para ser responsivo */
+    max-width: 100%;
     height: auto;
     position: relative;
     z-index: 1;
@@ -213,53 +203,52 @@ nav ul li a:nth-child(4) {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 60px 20px; /* Espacio alrededor para respiración */
-    text-align: left; /* Alineación de texto a la izquierda */
+    padding: 60px 20px;
+    text-align: left;
 }
 
 .sobre-mi-container {
     display: flex;
-    flex-direction: row; /* Distribuye el video y texto en línea */
+    flex-direction: row;
     align-items: center;
-    gap: 40px; /* Espacio entre el video y el texto */
-    max-width: 1200px; /* Ancho máximo para limitar el contenido */
-    width: 100%; /* Ocupa todo el ancho disponible */
-    padding: 20px; /* Espacio interno */
-    background-color: #fff; /* Fondo blanco para un look limpio */
+    gap: 40px;
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
 }
 
 .sobre-mi-video {
-    flex: 1; /* Video ocupa el 50% del espacio */
-    max-width: 600px; /* Limita el ancho máximo del video */
+    flex: 1;
+    max-width: 600px;
 }
 
 .sobre-mi-video video {
-    width: 100%; /* El video ocupa todo el ancho disponible */
-    height: auto; /* Mantiene las proporciones */
-    border-radius: 15px; /* Bordes redondeados para armonía visual */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
-    object-fit: cover; /* Mantiene el video ajustado al contenedor */
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
 }
 
 .sobre-mi-texto {
-    flex: 1; /* Texto ocupa el otro 50% */
-    color: #333; /* Texto oscuro para buena legibilidad */
-    line-height: 1.8; /* Espaciado entre líneas */
-    font-family: 'Times New Roman', sans-serif; /* Fuente limpia y moderna */
-    font-size: 16px; /* Tamaño de texto cómodo para lectura */
-    padding: 20px; /* Espacio interno */
+    flex: 1;
+    color: #333;
+    line-height: 1.8;
+    font-family: 'Times New Roman', sans-serif;
+    font-size: 16px;
+    padding: 20px;
 }
 
 .sobre-mi-texto h2 {
-    font-size: 36px; /* Tamaño del título */
-    color: #000; /* Color del título */
-    margin-bottom: 20px; /* Espacio debajo del título */
-    font-family: 'Times New Roman', serif; /* Elegancia y contraste en la tipografía */
+    font-size: 36px;
+    color: #000;
+    margin-bottom: 20px;
+    font-family: 'Times New Roman', serif;
 }
 
 .sobre-mi-texto p {
-    margin: 0; /* Elimina márgenes innecesarios */
-
+    margin: 0;
 }
 
 #citas {
@@ -344,6 +333,7 @@ nav ul li a:nth-child(4) {
     display: none;
 }
 
+/* Estilos del footer */
 footer {
     background-color: #000;
     color: #fff;
@@ -392,15 +382,9 @@ footer p a {
     }
 
     nav ul li a {
-        font-size: 20px;
+        font-size: 14px;
         padding: 10px 0;
     }
-
-    nav {
-        top: 75%
-        width: 90%
-    }
-}
 
     #tatuajes .grid {
         grid-template-columns: repeat(3, 1fr); /* Cambia a 3 columnas para pantallas más pequeñas */
@@ -458,7 +442,6 @@ footer p a {
 .gallery-grid {
     display: grid;
     width: 100%;
-    display: auto;
     grid-template-columns: repeat(6, 1fr);
     gap: 15px;
     max-width: 1200px;
@@ -467,7 +450,6 @@ footer p a {
 
 .gallery-grid img {
     width: 100%;
-    display: auto;
     border-radius: 15px;
     cursor: pointer;
     transition: transform 0.3s ease, opacity 0.3s ease;
@@ -484,17 +466,8 @@ footer p a {
     }
 }
 
-
+/* Animaciones */
 @keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes fadeInImage {
     0% {
         opacity: 0;
     }
@@ -537,4 +510,3 @@ footer p a {
     color: #fff;
     cursor: pointer;
 }
-
