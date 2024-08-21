@@ -85,12 +85,47 @@
 
         <section id="citas" class="full-screen">
             <h2 class="fade-in">Citas</h2>
-            <p class="fade-in">Para reservar una cita o para pedir presupuesto puedes rellenar el formulario o mandarme un whatsapp al número 614356822.</p>
-            <button class="fade-in" onclick="window.location.href='https://forms.gle/rvbZkEgcxhneApb17'">Formulario</button>
-            <button class="fade-in" onclick="window.location.href='https://wa.me/message/XJVRIUSIFZPNF1'">Whatsapp</button>
-            <p class="fade-in">Asegúrate añadir cuanto más detalle a tu idea: tamaño en centímetros, localización del cuerpo, descripción de tu idea, pásame también cualquier referencia que tengas… etc…</p>
-            <p class="fade-in">Para reservar cita es indispensable dejar un depósito</p>
-            <p class="fade-in">No se realizará ningún boceto sin cita</p>
+            <p class="subtitle fade-in"><em>Para reservar cita o pedir presupuesto rellena este formulario:</em></p>
+            
+            <form id="citas-form" action="https://formspree.io/f/xwpengbn" method="POST" class="fade-in" enctype="multipart/form-data">
+                <label for="name">Nombre y apellidos</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="idea">Cuéntame tu idea</label>
+                <p>Para entender y poder plasmar mejor la idea de lo que quieres tatuarte, necesito toda la información y detalles que puedas darme. Describe cuánto más detalladamente tu idea, qué elementos quieres que lleve, cuáles son los elementos principales, etc. Si lo que quieres hacerte es uno de mis bocetos disponibles, escríbelo aquí abajo.</p>
+                <textarea id="idea" name="idea" rows="6" required></textarea>
+                
+                <label for="zone">Zona del cuerpo</label>
+                <p>En qué zona del cuerpo quieres tatuarte? Ejemplo: “antebrazo izquierdo, cara interior” / “Muslo derecho, en la zona lateral que suba hasta la cadera” (Si quieres puedes mandarme la foto de la zona).</p>
+                <input type="text" id="zone" name="zone" required>
+                
+                <label for="size">Tamaño del tatuaje</label>
+                <p>Esta información es indispensable para darte presupuesto! (Y para hacer el boceto!). Si puedes, mide con una regla o con un metro la zona que quieras que ocupe el tatuaje para poder saber el tamaño en centímetros.</p>
+                <input type="text" id="size" name="size" required>
+                
+                <label for="references">Referencias</label>
+                <p>Si tienes alguna foto de referencia, súbela aquí! Que sean dibujos, fotos, tatuajes que te gustan y de los que quieras que coja inspiración. Si quieres puedes también mandarme un croquis de tu idea! Cualquier imagen que crees que puede ser útil, súbela por aquí.</p>
+                <input type="file" id="references" name="references" multiple>
+                
+                <label for="date">Cuándo quieres tatuarte?</label>
+                <p>Dime si tienes alguna preferencia de fechas, días o horario.</p>
+                <input type="text" id="date" name="date">
+                
+                <label for="phone">Tu teléfono (WhatsApp)</label>
+                <input type="text" id="phone" name="phone" required>
+                
+                <label for="email">Tu correo electrónico</label>
+                <input type="email" id="email" name="email" required>
+                
+                <button type="submit">Enviar formulario</button>
+            </form>
+        
+            <p class="fade-in">
+                Una vez recibido el formulario te volveré a contactar a través de WhatsApp (asegúrate apuntar bien el número) en máximo 3 días laborables.<br>
+                Para reservar cita será indispensable pagar un depósito, que se descontará del precio final del tatuaje, el mismo día de la sesión.<br>
+                La elaboración del boceto se realizará exclusivamente con cita en la semana/días anteriores al día de la misma, siguiendo el orden de citas de la agenda.<br>
+                Si lo prefieres puedes contactarme por <button class="whatsapp-button" onclick="window.location.href='https://wa.me/message/XJVRIUSIFZPNF1'">WhatsApp</button>
+            </p>
         </section>
 
         <section id="contacto" class="full-screen">

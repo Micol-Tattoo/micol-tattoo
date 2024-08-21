@@ -274,24 +274,132 @@ nav ul li:not(:last-child)::after {
     padding: 20px;
 }
 
-#citas button {
-    background: none;
+/* Estilos del formulario */
+
+#citas-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px; /* Ajuste para que los campos de texto se mantengan dentro del formulario */
+    margin: 0 auto 20px auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#citas-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333; /* Gris oscuro */
+    display: flex;
+    align-items: center;
+}
+
+#citas-form label::after {
+    content: '*';
+    color: red;
+    margin-left: 5px;
+    font-size: 1rem;
+}
+
+#citas-form p {
+    font-size: 14px;
+    color: #555; /* Gris oscuro */
+    margin-top: -5px; /* Ajuste para la separación con el título */
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+#citas-form input[type="text"],
+#citas-form input[type="email"],
+#citas-form textarea {
+    width: 100%; /* Ajuste para que se mantengan dentro del formulario */
+    padding: 8px; /* Reducción del padding para ajustar los campos */
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#citas-form textarea {
+    height: 100px; /* Ajuste de la altura del textarea */
+}
+
+#citas-form input[type="file"] {
+    margin-bottom: 20px;
+}
+
+#citas-form .radio-group {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+#citas-form button[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#citas-form button[type="submit"]:hover {
+    background-color: #555;
+}
+
+/* Estilos del botón de WhatsApp */
+.whatsapp-button {
+    background: transparent;
     border: 2px solid #fff;
     color: #fff;
-    padding: 10px 20px;
+    padding: 8px 12px; /* Tamaño ajustado para ser más pequeño */
     cursor: pointer;
     transition: background 0.3s, color 0.3s;
-    border-radius: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    font-size: 14px; /* Tamaño ajustado para que sea más pequeño */
+    margin-top: 15px;
 }
 
-#citas button:hover {
+.whatsapp-button:hover {
     background: #fff;
-    color: #000;
+    color: #333;
 }
 
-#citas a {
-    color: #fff;
-    text-decoration: underline;
+/* Ajuste de la separación entre campos */
+#phone {
+    margin-bottom: 30px; /* Más espacio entre "Tu teléfono" y "Tu correo electrónico" */
+}
+
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+    #citas-form {
+        padding: 15px;
+        max-width: 100%;
+        margin: 10px auto;
+    }
+
+    #citas-form label {
+        font-size: 16px; /* Tamaño de texto ligeramente reducido */
+    }
+
+    #citas-form input[type="text"],
+    #citas-form input[type="tel"],
+    #citas-form input[type="email"],
+    #citas-form textarea {
+        font-size: 14px; /* Tamaño de texto ligeramente reducido */
+    }
+
+    #citas-form button {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    .form-description {
+        font-size: 13px; /* Tamaño de texto reducido para descripciones */
+    }
 }
 
 #contacto {

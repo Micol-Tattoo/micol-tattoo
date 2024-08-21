@@ -60,3 +60,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+<!-- Cambia el action del formulario para que apunte a Formspree -->
+<form id="citas-form" class="fade-in" action="https://formspree.io/f/xwpengbn" method="POST" enctype="multipart/form-data">
+    <!-- Tu formulario aquí -->
+</form>
