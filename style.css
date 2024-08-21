@@ -379,37 +379,41 @@ nav ul li:not(:last-child)::after {
     background-color: #555;
 }
 
-/* Estilo del label para el consentimiento */
 .consent-label {
     display: block;
-    font-weight: lighter;
-    font-size: 14px; /* Asegura un tamaño de fuente consistente */
-    color: #333; /* Color de texto acorde con el formulario */
-    display: block; 
+    font-weight: normal;
+    margin-bottom: 15px;
+    font-size: 14px;
     line-height: 1.5;
+    white-space: normal; /* Permite que el texto se ajuste según sea necesario */
     word-break: break-word;
-    align-items: center; /* Centra el checkbox verticalmente con el texto */
 }
 
-.consent-label
-input [type="checkbox"] {
+.consent-label input[type="checkbox"] {
     margin-right: 10px;
+    vertical-align: middle;
+}
+
+.consent-label span {
+    display: inline; /* Asegura que el texto y el enlace se mantengan en la misma línea */
 }
 
 .consent-label a {
-    font-weight: normal;
+    color: inherit; /* Hereda el color del texto para que no se vea diferente */
+    text-decoration: underline;
+    font-weight: normal; /* Asegura que el enlace no esté en negrita */
+    font-style: inherit; /* Hereda el estilo de la fuente del texto circundante */
+    white-space: nowrap; /* Evita que el enlace se divida en varias líneas */
 }
 
-@media screen and (max-width:480px) {
+@media screen and (max-width: 480px) {
     .consent-label {
-        display: block;
         text-align: left;
-        white-space: normal;   
     }
 
     .consent-label a {
-        display: block;
-        margin-left: 20px;
+        display: inline;
+        white-space: normal; /* Permite que el enlace se ajuste según sea necesario en pantallas pequeñas */
     }
 }
 
