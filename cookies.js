@@ -39,8 +39,8 @@ function getCookie(name) {
 }
 
 function enableNonEssentialCookies() {
-    // Activa cookies no esenciales aquí, por ejemplo, Google Analytics
-    // gtag('config', 'UA-XXXXXXX-X'); // Descomenta esta línea y reemplaza con tu ID de Google Analytics
+    // Activa Google Analytics
+    gtag('config', 'G-5ZVYQYJFTJ'); // ID de Google Analytics
 }
 
 function disableNonEssentialCookies() {

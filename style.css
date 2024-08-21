@@ -383,7 +383,7 @@ nav ul li:not(:last-child)::after {
     font-weight: normal; /* Remueve la negrita */
     font-size: 14px; /* Asegura un tamaño de fuente consistente */
     color: #333; /* Color de texto acorde con el formulario */
-    display: flex; /* Permite la alineación de elementos en línea */
+    display: block; 
     align-items: center; /* Centra el checkbox verticalmente con el texto */
 }
 
@@ -402,7 +402,13 @@ nav ul li:not(:last-child)::after {
 
 /* Espaciador para añadir separación entre "la" y "Política de Privacidad" */
 .italic-space {
-    margin-right: 0.2em; /* Ajusta la cantidad de espacio según lo necesario */
+    margin-right: 0.2em; 
+    white-space: nowrap;
+}
+
+.consent-label span,
+.consent-label a {
+    display: inline;
 }
 
 /* Estilos del botón de WhatsApp */
@@ -602,6 +608,49 @@ footer p a {
         justify-content: center;
         flex-wrap: wrap;
     }
+}
+
+#cookie-banner {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    z-index: 1000;
+    box-sizing: border-box; /* Asegura que el padding se incluya en el ancho total */
+}
+
+#cookie-banner p {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    font-size: 14px; /* Ajuste de tamaño para móviles */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#cookie-banner a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+#cookie-banner button {
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 14px; /* Ajuste de tamaño para móviles */
+}
+
+#cookie-banner button:last-child {
+    background-color: #dc3545;
 }
 
 /* Estilos para la galería */
