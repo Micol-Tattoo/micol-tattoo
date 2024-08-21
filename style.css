@@ -380,11 +380,17 @@ nav ul li:not(:last-child)::after {
 
 /* Estilo del label para el consentimiento */
 .consent-label {
+    display: block;
     font-weight: normal; /* Remueve la negrita */
     font-size: 14px; /* Asegura un tamaño de fuente consistente */
     color: #333; /* Color de texto acorde con el formulario */
     display: block; 
     align-items: center; /* Centra el checkbox verticalmente con el texto */
+}
+
+.consent-label
+input [type="checkbox"] {
+    margin-right: 10px;
 }
 
 /* Estilo para el enlace de la política de privacidad */
