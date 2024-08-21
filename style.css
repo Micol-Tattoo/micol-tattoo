@@ -295,6 +295,7 @@ nav ul li:not(:last-child)::after {
     align-items: center;
 }
 
+
 /* Mantén el asterisco por defecto */
 #citas-form label::after {
     content: '*';
@@ -381,16 +382,35 @@ nav ul li:not(:last-child)::after {
 /* Estilo del label para el consentimiento */
 .consent-label {
     display: block;
-    font-weight: normal; /* Remueve la negrita */
+    font-weight: lighter;
     font-size: 14px; /* Asegura un tamaño de fuente consistente */
     color: #333; /* Color de texto acorde con el formulario */
     display: block; 
+    line-height: 1.5;
+    word-break: break-word;
     align-items: center; /* Centra el checkbox verticalmente con el texto */
 }
 
 .consent-label
 input [type="checkbox"] {
     margin-right: 10px;
+}
+
+.consent-label a {
+    font-weight: normal;
+}
+
+@media screen and (max-width:480px) {
+    .consent-label {
+        display: block;
+        text-align: left;
+        white-space: normal;   
+    }
+
+    .consent-label a {
+        display: block;
+        margin-left: 20px;
+    }
 }
 
 /* Estilo para el enlace de la política de privacidad */
