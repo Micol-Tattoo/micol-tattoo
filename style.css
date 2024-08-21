@@ -380,13 +380,13 @@ nav ul li:not(:last-child)::after {
 }
 
 .consent-label {
-    display: block;
+    display: flex;
+    align-items: center;
     font-weight: normal;
     margin-bottom: 15px;
     font-size: 14px;
     line-height: 1.5;
-    white-space: normal; /* Permite que el texto se ajuste según sea necesario */
-    word-break: break-word;
+    flex-wrap: wrap; /* Permite que el texto se ajuste en pantallas más pequeñas */
 }
 
 .consent-label input[type="checkbox"] {
@@ -394,26 +394,30 @@ nav ul li:not(:last-child)::after {
     vertical-align: middle;
 }
 
-.consent-label span {
-    display: inline; /* Asegura que el texto y el enlace se mantengan en la misma línea */
+.consent-label span,
+.consent-label a {
+    display: inline;
+    white-space: pre-wrap; /* Permite que el texto se divida adecuadamente si es necesario */
 }
 
 .consent-label a {
-    color: inherit; /* Hereda el color del texto para que no se vea diferente */
-    text-decoration: underline;
-    font-weight: normal; /* Asegura que el enlace no esté en negrita */
-    font-style: inherit; /* Hereda el estilo de la fuente del texto circundante */
-    white-space: nowrap; /* Evita que el enlace se divida en varias líneas */
+    color: #007BFF; /* Azul */
+    text-decoration: none; /* Sin subrayado */
+    font-style: italic; /* En cursiva */
+    font-weight: normal;
+}
+
+.consent-label a:hover {
+    text-decoration: underline; /* Subrayado en hover para accesibilidad */
 }
 
 @media screen and (max-width: 480px) {
     .consent-label {
-        text-align: left;
+        flex-direction: row; /* Mantiene todo en una línea si cabe */
     }
 
     .consent-label a {
-        display: inline;
-        white-space: normal; /* Permite que el enlace se ajuste según sea necesario en pantallas pequeñas */
+        white-space: pre-wrap; /* Asegura que el enlace se ajuste correctamente */
     }
 }
 
