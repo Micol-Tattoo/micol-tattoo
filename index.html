@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>M I C O L  •  T A T T O O</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Script de Uploadcare -->
+    <script src="https://ucarecdn.com/libs/widget/3.x/uploadcare.full.min.js"></script>
 </head>
 <body>
     <header>
@@ -87,7 +89,15 @@
             <h2 class="fade-in">Citas</h2>
             <p class="subtitle fade-in"><em>Para reservar cita o pedir presupuesto rellena este formulario:</em></p>
             
-            <form id="citas-form" action="https://formspree.io/f/xwpengbn" method="POST" class="fade-in" enctype="multipart/form-data">
+            <!-- Formulario con FormSubmit -->
+            <form id="citas-form" action="https://formsubmit.co/micoltattoo@gmail.com" method="POST">
+                <!-- Configuración para enviar el formulario por correo -->
+                <input type="hidden" name="_subject" value="Nuevo formulario de citas recibido!">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_next" value="https://micoltattoo.com/thanks.html">
+        
+                <!-- Preguntas del formulario -->
                 <label for="name">Nombre y apellidos</label>
                 <input type="text" id="name" name="name" required>
                 
@@ -103,9 +113,9 @@
                 <p>Esta información es indispensable para darte presupuesto! (Y para hacer el boceto!). Si puedes, mide con una regla o con un metro la zona que quieras que ocupe el tatuaje para poder saber el tamaño en centímetros.</p>
                 <input type="text" id="size" name="size" required>
                 
-                <label for="references">Referencias</label>
+                <label for="file">Referencias</label>
                 <p>Si tienes alguna foto de referencia, súbela aquí! Que sean dibujos, fotos, tatuajes que te gustan y de los que quieras que coja inspiración. Si quieres puedes también mandarme un croquis de tu idea! Cualquier imagen que crees que puede ser útil, súbela por aquí.</p>
-                <input type="file" id="references" name="references" multiple>
+                <input type="hidden" role="uploadcare-uploader" data-public-key="e8d583f402e192de15c5" name="file" />
                 
                 <label for="date">Cuándo quieres tatuarte?</label>
                 <p>Dime si tienes alguna preferencia de fechas, días o horario.</p>

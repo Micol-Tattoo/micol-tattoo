@@ -329,6 +329,29 @@ nav ul li:not(:last-child)::after {
     margin-bottom: 20px;
 }
 
+/* Estilos específicos para el botón de Uploadcare */
+.uploadcare--widget__button {
+    background-color: #333; /* Fondo oscuro para que coincida con otros botones */
+    color: #fff; /* Texto blanco */
+    padding: 10px 15px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño del texto */
+    cursor: pointer; /* Indicador de interactividad */
+    display: inline-block; /* Asegura que se comporte como un botón */
+    text-align: center; /* Centra el texto dentro del botón */
+    margin-bottom: 20px; /* Separación inferior */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+.uploadcare--widget__button:hover {
+    background-color: #555; /* Color de fondo al pasar el cursor */
+}
+
+.uploadcare--widget__button:focus {
+    outline: none; /* Elimina el borde predeterminado del enfoque */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Añade un sombreado al botón cuando está enfocado */
+}
+
 #citas-form .radio-group {
     display: flex;
     justify-content: space-around;
