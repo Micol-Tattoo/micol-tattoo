@@ -126,6 +126,11 @@
                 
                 <label for="email">Tu correo electrónico</label>
                 <input type="email" id="email" name="email" required>
+
+                <label for="consent" class="consent-label">
+                    <input type="checkbox" id="consent" name="consent" required>
+                    He leído y acepto la <span class="italic-space"> </span><a href="politica-privacidad.html" target="_blank" class="privacy-link">Política de Privacidad</a>.
+                </label>
                 
                 <button type="submit">Enviar formulario</button>
             </form>
@@ -155,7 +160,7 @@
         </section>
 
         <footer>
-            <p>Website made by  <span class="green-text">Micol</span></p>
+            <p>Website made by <span class="green-text">Micol</span></p>
             <p><a href="politica-cookies.html">Política de Cookies</a> | <a href="politica-privacidad.html">Política de Privacidad</a> | <a href="aviso-legal.html">Aviso Legal</a></p>
         </footer>
     </main>
@@ -165,6 +170,17 @@
         <span class="close" id="close-modal">X</span>
     </div>
 
+    <!-- Banner de Cookies -->
+    <div id="cookie-banner" style="display: none; position: fixed; bottom: 0; width: 100%; background-color: #333; color: #fff; padding: 20px; text-align: center; z-index: 1000;">
+        <p>Este sitio utiliza cookies para mejorar tu experiencia. Al continuar navegando, aceptas nuestro uso de cookies. 
+            <a href="politica-cookies.html" style="color: #fff; text-decoration: underline;">Leer más</a>.
+        </p>
+        <button id="accept-cookies" style="margin: 5px; padding: 10px 20px; background-color: #28a745; color: #fff; border: none; cursor: pointer;">Aceptar</button>
+        <button id="reject-cookies" style="margin: 5px; padding: 10px 20px; background-color: #dc3545; color: #fff; border: none; cursor: pointer;">Rechazar</button>
+    </div>
+
+    <!-- Scripts -->
     <script src="scripts.js"></script>
+    <script src="cookies.js"></script>
 </body>
 </html>

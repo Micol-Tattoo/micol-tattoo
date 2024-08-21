@@ -295,11 +295,17 @@ nav ul li:not(:last-child)::after {
     align-items: center;
 }
 
+/* Mantén el asterisco por defecto */
 #citas-form label::after {
     content: '*';
     color: red;
     margin-left: 5px;
     font-size: 1rem;
+}
+
+/* Quita el asterisco solo de "Referencias" */
+#citas-form label[for="file"]::after {
+    content: ''; /* Vacía el contenido del pseudo-elemento */
 }
 
 #citas-form p {
@@ -370,6 +376,33 @@ nav ul li:not(:last-child)::after {
 
 #citas-form button[type="submit"]:hover {
     background-color: #555;
+}
+
+/* Estilo del label para el consentimiento */
+.consent-label {
+    font-weight: normal; /* Remueve la negrita */
+    font-size: 14px; /* Asegura un tamaño de fuente consistente */
+    color: #333; /* Color de texto acorde con el formulario */
+    display: flex; /* Permite la alineación de elementos en línea */
+    align-items: center; /* Centra el checkbox verticalmente con el texto */
+}
+
+/* Estilo para el enlace de la política de privacidad */
+.privacy-link {
+    font-style: italic; /* Aplica cursiva al enlace */
+    color: #6aaff9; /* Color del enlace (ajusta según tu diseño) */
+    text-decoration: none; /* Remueve el subrayado del enlace */
+    margin-left: 0.2em; /* Añade espacio entre "la" y "Política de Privacidad" */
+}
+
+/* Estilo del enlace al pasar el ratón */
+.privacy-link:hover {
+    text-decoration: underline; /* Subraya el enlace al pasar el ratón */
+}
+
+/* Espaciador para añadir separación entre "la" y "Política de Privacidad" */
+.italic-space {
+    margin-right: 0.2em; /* Ajusta la cantidad de espacio según lo necesario */
 }
 
 /* Estilos del botón de WhatsApp */
