@@ -25,8 +25,8 @@ document.addEventListener("DOMContentLoaded", function () {
     tattooImages.forEach(image => {
         image.addEventListener('click', () => {
             modalImg.src = image.src;
-            modal.classList.remove('hidden');
             modal.classList.add('show');
+            modal.classList.remove('hidden');
         });
     });
 
@@ -35,8 +35,9 @@ document.addEventListener("DOMContentLoaded", function () {
         modal.classList.remove('show');
     });
 
+    // Si se hace clic en cualquier parte del modal que no sea la imagen o el botón de cierre, se cierra el modal
     modal.addEventListener('click', (e) => {
-        if (e.target !== modalImg && e.target !== closeModal) {
+        if (e.target === modal) {
             modal.classList.add('hidden');
             modal.classList.remove('show');
         }
@@ -60,8 +61,3 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
-
-<!-- Cambia el action del formulario para que apunte a Formspree -->
-<form id="citas-form" class="fade-in" action="https://formspree.io/f/xwpengbn" method="POST" enctype="multipart/form-data">
-    <!-- Tu formulario aquí -->
-</form>
