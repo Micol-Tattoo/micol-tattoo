@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-    content="Formulario de citas para Micol Tattoo, tatuadora en Madrid Rivas Vaciamadrid">
+    <meta name="description" content="Formulario de citas para Micol Tattoo, tatuadora en Madrid Rivas Vaciamadrid">
     <title>Formulario de Citas - Micol Tattoo</title>
     <link rel="stylesheet" href="style.css">
     <!-- Script de Uploadcare -->
@@ -14,7 +13,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-5ZVYQYJFTJ"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
 
         gtag('config', 'G-5ZVYQYJFTJ');
@@ -23,41 +22,54 @@
 
 <body>
     <header>
-        <h1 class="banner-text fade-in">Micol Tattoo • Formulario de Citas</h1>
+        <!-- Cambiamos el banner a lo que pides -->
+        <h1 class="banner-text fade-in">M  I  C  O  L  •  T  A  T  T  O  O</h1>
     </header>
 
     <main>
         <section id="formulario" class="full-screen">
-            <h2 class="fade-in">Reserva tu cita</h2>
+            <!-- Nuevo texto centrado en negrita -->
+            <div style="text-align: center; margin-top: 20px;">
+                <strong style="font-size: 24px; letter-spacing: 2px;">F O R M U L A R I O</strong>
+            </div>
+
+            <!-- Modificación del título del formulario y nuevo texto debajo -->
+            <h2 class="fade-in" style="text-align: center; font-style: italic; margin-top: 40px;">Reserva tu cita</h2>
+            <p style="text-align: center; font-weight: normal; font-size: 18px;">
+                Si quieres reservar cita o pedir presupuesto, envíame un formulario.<br>
+                Te volveré a contactar a través de WhatsApp en cuanto pueda 🖤
+            </p>
+
+            <!-- Formulario de contacto -->
             <form id="citas-form" action="https://formsubmit.co/micoltattoo@gmail.com" method="POST">
                 <!-- Configuración para enviar el formulario por correo -->
                 <input type="hidden" name="_subject" value="Nuevo formulario de citas recibido!">
                 <input type="hidden" name="_captcha" value="false">
                 <input type="hidden" name="_template" value="table">
                 <input type="hidden" name="_next" value="https://micoltattoo.com/thanks.html">
-        
+
                 <!-- Preguntas del formulario -->
                 <label for="name">Nombre y apellidos</label>
                 <input type="text" id="name" name="name" required>
-                
+
                 <label for="idea">Cuéntame tu idea</label>
                 <textarea id="idea" name="idea" rows="6" required></textarea>
-                
+
                 <label for="zone">Zona del cuerpo</label>
                 <input type="text" id="zone" name="zone" required>
-                
+
                 <label for="size">Tamaño del tatuaje</label>
                 <input type="text" id="size" name="size" required>
-                
+
                 <label for="file">Referencias</label>
                 <input type="hidden" role="uploadcare-uploader" data-public-key="e8d583f402e192de15c5" name="file" />
-                
+
                 <label for="date">Cuándo quieres tatuarte?</label>
                 <input type="text" id="date" name="date">
-                
+
                 <label for="phone">Tu teléfono (WhatsApp)</label>
                 <input type="text" id="phone" name="phone" required>
-                
+
                 <label for="email">Tu correo electrónico</label>
                 <input type="email" id="email" name="email" required>
 
@@ -65,9 +77,17 @@
                     <input type="checkbox" id="consent" name="consent" required>
                     He leído y acepto la <a href="politica-privacidad.html" target="_blank" class="privacy-link">Política de Privacidad</a>.
                 </label>
-                
+
                 <button type="submit">Enviar formulario</button>
             </form>
+
+            <!-- Nuevo contenido centrado debajo del formulario -->
+            <div style="text-align: center; margin-top: 40px;">
+                <p style="font-weight: bold;">Vuelve a la web</p>
+                <button style="background-color: #333; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;" onclick="window.location.href='https://micoltattoo.com';">
+                    micoltattoo.com
+                </button>
+            </div>
         </section>
     </main>
 

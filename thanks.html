@@ -6,14 +6,53 @@
     <title>M I C O L  •  T A T T O O</title>
     <link rel="stylesheet" href="style.css">
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5ZVYQYJFTJ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5ZVYQYJFTJ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  gtag('config', 'G-5ZVYQYJFTJ');
-</script>
+      gtag('config', 'G-5ZVYQYJFTJ');
+    </script>
+    <style>
+        /* Asegurarnos de que el botón y el texto estén centrados y el botón esté en primer plano */
+        .thank-you-message {
+            text-align: center;
+            margin-top: 100px; /* Aseguramos que el mensaje no esté muy arriba */
+        }
+
+        .thank-you-message h2, .thank-you-message p {
+            margin-bottom: 20px;
+        }
+
+        /* El botón estará centrado y con un z-index alto */
+        .center-button-container {
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 80px;
+            position: relative;
+            z-index: 10; /* Ponemos el botón en primer plano */
+        }
+
+        .center-button-container button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .center-button-container button:hover {
+            background-color: #555;
+        }
+
+        /* Ajustar la imagen para que no tape otros elementos */
+        #ilustracion-section {
+            position: relative;
+            z-index: 1; /* Imagen en segundo plano para no tapar el botón */
+        }
+    </style>
 </head>
 <body>
     <!-- Banner superior -->
@@ -26,9 +65,18 @@
         <section id="thanks" class="full-screen">
             <div class="thank-you-message">
                 <h2>Gracias por mandar el formulario!</h2>
+                <h2>🖤</h2>
                 <p>En cuanto pueda te volveré a contactar por WhatsApp!</p>
             </div>
         </section>
+
+        <!-- Botón para volver a la web -->
+        <div class="center-button-container">
+            <p style="font-weight: bold;">Vuelve a la web</p>
+            <button onclick="window.location.href='https://micoltattoo.com';">
+                micoltattoo.com
+            </button>
+        </div>
 
         <!-- Sección de contacto -->
         <section id="contacto" class="full-screen">
