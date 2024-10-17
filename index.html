@@ -99,53 +99,8 @@
 
         <section id="citas" class="full-screen">
             <h2 class="fade-in">Citas</h2>
-            <p class="subtitle fade-in"><em>Para reservar cita o pedir presupuesto rellena este formulario:</em></p>
-            
-            <!-- Formulario con FormSubmit -->
-            <form id="citas-form" action="https://formsubmit.co/micoltattoo@gmail.com" method="POST">
-                <!-- Configuración para enviar el formulario por correo -->
-                <input type="hidden" name="_subject" value="Nuevo formulario de citas recibido!">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_template" value="table">
-                <input type="hidden" name="_next" value="https://micoltattoo.com/thanks.html">
-        
-                <!-- Preguntas del formulario -->
-                <label for="name">Nombre y apellidos</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="idea">Cuéntame tu idea</label>
-                <p>Para entender y poder plasmar mejor la idea de lo que quieres tatuarte, necesito toda la información y detalles que puedas darme. Describe cuánto más detalladamente tu idea, qué elementos quieres que lleve, cuáles son los elementos principales, etc. Si lo que quieres hacerte es uno de mis bocetos disponibles, escríbelo aquí abajo.</p>
-                <textarea id="idea" name="idea" rows="6" required></textarea>
-                
-                <label for="zone">Zona del cuerpo</label>
-                <p>En qué zona del cuerpo quieres tatuarte? Ejemplo: “antebrazo izquierdo, cara interior” / “Muslo derecho, en la zona lateral que suba hasta la cadera” (Si quieres puedes mandarme la foto de la zona).</p>
-                <input type="text" id="zone" name="zone" required>
-                
-                <label for="size">Tamaño del tatuaje</label>
-                <p>Esta información es indispensable para darte presupuesto! (Y para hacer el boceto!). Si puedes, mide con una regla o con un metro la zona que quieras que ocupe el tatuaje para poder saber el tamaño en centímetros.</p>
-                <input type="text" id="size" name="size" required>
-                
-                <label for="file">Referencias</label>
-                <p>Si tienes alguna foto de referencia, súbela aquí! Que sean dibujos, fotos, tatuajes que te gustan y de los que quieras que coja inspiración. Si quieres puedes también mandarme un croquis de tu idea! Cualquier imagen que crees que puede ser útil, súbela por aquí.</p>
-                <input type="hidden" role="uploadcare-uploader" data-public-key="e8d583f402e192de15c5" name="file" />
-                
-                <label for="date">Cuándo quieres tatuarte?</label>
-                <p>Dime si tienes alguna preferencia de fechas, días o horario.</p>
-                <input type="text" id="date" name="date">
-                
-                <label for="phone">Tu teléfono (WhatsApp)</label>
-                <input type="text" id="phone" name="phone" required>
-                
-                <label for="email">Tu correo electrónico</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="consent" class="consent-label">
-                    <input type="checkbox" id="consent" name="consent" required>
-                    He leído y acepto la <span class="italic-space"> </span><a href="politica-privacidad.html" target="_blank" class="privacy-link">Política de Privacidad</a>.
-                </label>
-                
-                <button type="submit">Enviar formulario</button>
-            </form>
+            <p class="subtitle fade-in"><em>Para reservar cita o pedir presupuesto rellena el 
+                <button class="form-button" onclick="window.location.href='formulario.html'">formulario</button>:</em></p>
         
             <p class="fade-in">
                 Una vez recibido el formulario te volveré a contactar a través de WhatsApp (asegúrate apuntar bien el número) en máximo 3 días laborables.<br>

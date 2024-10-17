@@ -274,6 +274,24 @@ nav ul li:not(:last-child)::after {
     padding: 20px;
 }
 
+.form-button {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+.form-button:hover {
+    background: #fff;
+    color: #333;
+}
+
+
 /* Estilos del formulario */
 
 #citas-form {
